@@ -1,0 +1,147 @@
+.form_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the form is vertically centered on the page */
+    background-color: #f0f2f5; /* Light grey background for the page */
+}
+
+.authentication_form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Limit the maximum width of the form */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.authentication_form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Image Upload Section */
+.image_input_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image_preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image_label {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.image_label:hover {
+    background-color: #0056b3;
+}
+
+.image_input {
+    display: none; /* Hide the default file input */
+}
+
+/* Form Inputs Section */
+.form_inputs {
+    margin-bottom: 20px;
+}
+
+.inputs_row {
+    display: flex;
+    gap: 20px; /* Space between the two input columns */
+    margin-bottom: 20px;
+}
+
+.inputs_row > div {
+    flex: 1; /* Each div takes equal width */
+    display: flex;
+    flex-direction: column;
+}
+
+.form_inputs label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form_text_input,
+.input_textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in the width */
+    transition: border-color 0.3s ease;
+}
+
+.form_text_input:focus,
+.input_textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.signup_textares_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+    min-height: 80px; /* Minimum height for the textarea */
+}
+
+/* Submit Button */
+.form_submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form_submit:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .inputs_row {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .authentication_form {
+        margin: 20px; /* Add some margin on smaller screens */
+        padding: 20px;
+    }
+}
