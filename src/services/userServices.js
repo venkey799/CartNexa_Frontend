@@ -38,7 +38,6 @@ export async function login(user){
               token: data.token,
             };
 localStorage.setItem("user", JSON.stringify(userData));
-console.log(userData)
 return userData;
 }
 

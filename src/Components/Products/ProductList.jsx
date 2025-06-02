@@ -3,7 +3,7 @@ import './ProductList.css'
 import useData from '../../hooks/useData';
 import { useSearchParams } from 'react-router-dom';
 import Pagination from '../Common/Pagination';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 function ProductList() {
 const [search, setSearch] = useSearchParams()
 const category = search.get("category")

@@ -20,7 +20,6 @@ function NavBar() {
   const [search, setSearch] = useState('');
   const [suggestions, setSuggestions] = useState()
  const [selectedItem, setSelectedItem] = useState();
-
   const handleSubmit = e => {
     e.preventDefault()
     if(search.trim() !== ""){
@@ -45,7 +44,7 @@ function NavBar() {
       setSuggestions([]);
     }
     }else {
-      selectedItem(-1);
+      setSelectedItem(-1);
     }
 
   }
@@ -70,9 +69,9 @@ function NavBar() {
           <button className='search_button'>search</button>
 
     {
-      suggestions.length > 0 && <ul className="search_results">
+      suggestions?.length > 0 && <ul className="search_results">
       {
-        suggestions.map(item=> <li key={item._id} className={selectedItem === index ? "search_suggestion_link active" : "search_suggestion_link"}>
+        suggestions.map((item,index)=> <li key={item._id} className={selectedItem === index ? "search_suggestion_link active" : "search_suggestion_link"}>
         <Link to={`/products?search=${suggestions.title}`} onClick={()=> {setSearch(""); setSuggestions([])}}>{suggestions.title}</Link>
       </li>)
       }

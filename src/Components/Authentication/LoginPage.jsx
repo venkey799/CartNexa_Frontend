@@ -2,7 +2,6 @@ import { useForm } from 'react-hook-form';
 import {z} from "zod"
 import { zodResolver } from '@hookform/resolvers/zod/src/zod.js';
 import { getUser, login } from '../../services/userServices';
-
 const schema = z.object({
     email: z.string().email({message: "please enter valid email address."}).min(3),
     password: z.string().min(8)
@@ -20,7 +19,6 @@ function LoginPage() {
         reset,
      } = useForm({resolver: zodResolver(schema)})
     const onSubmit  = async(formData) => {
-        //  console.log(formData)
         try{
             await login(formData);
             window.location="/";
