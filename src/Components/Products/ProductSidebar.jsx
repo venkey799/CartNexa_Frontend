@@ -1,6 +1,6 @@
 
 import './ProductSidebar.css'
-
+import config from '../../config.json'
 import LinkWithIcon from '../NavBar/LinkWithIcon'
 import useData from '../../hooks/useData'
 function ProductSidebar() {
@@ -11,7 +11,7 @@ function ProductSidebar() {
         <div className='category_links'>
         {error && <em className='form_error'>{error}</em>}
             {
-              categories && categories.map(category=><LinkWithIcon key={category._id} id={category._id} title={category.name} link={`/products?category=${category.name}`} emoji={`http://localhost:5000/category/${category.image}`} sidebar={true}/>)
+              categories && categories.map(category=><LinkWithIcon key={category._id} id={category._id} title={category.name} link={`/products?category=${category.name}`} emoji={`${config.backendURL}/category/${category.image}`} sidebar={true}/>)
             }
             <LinkWithIcon />
         </div>

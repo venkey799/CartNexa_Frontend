@@ -1,5 +1,5 @@
 import React, { use } from 'react'
-
+import config from "../../config.json"
 import './ProductCart.css'
 import { Star } from 'lucide-react'
 import { ShoppingBasket } from 'lucide-react'
@@ -13,7 +13,7 @@ function ProductCart({product}) {
   return (
     <article className='product_card'>
         <div className=''>
-            <Link to={`/products/${product?._id}`}><img src={`http://localhost:5000/products/${product?.images[0]}`} className='product_image' alt="iphone-image"/></Link>
+            <Link to={`/products/${product?._id}`}><img src={`${config.backendURL}/products/${product?.images[0]}`} className='product_image' alt="iphone-image"/></Link>
         </div><hr className='hrline' />
         <div className='product_details'>
            <h3 className='product_price'>₹{product?.price?.toLocaleString('en-IN')}</h3>

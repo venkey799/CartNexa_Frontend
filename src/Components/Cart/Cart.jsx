@@ -1,4 +1,5 @@
 import { useState, useEffect,useContext } from 'react'
+import config from '../../config.json'
 import './Cart.css'
 import Table from '../Common/Table.jsx'
 import User from '../../assets/user.jpg'
@@ -34,7 +35,7 @@ setSubTotal(total)
         return (
 <section className='align_center cart_page'>
       <div className='align_center user_info'>
-        <img src={user?.profilePic ? `http://localhost:5000/profile/${user.profilePic}` : User} alt="profileimage" />
+        <img src={user?.profilePic ? `${config.backendURL}/profile/${user.profilePic}` : User} alt="profileimage" />
         <div>
           <p className="user_name">{user?.name}</p>
           <p className="user_email">{user?.email}</p>

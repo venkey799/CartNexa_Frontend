@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import useData from '../../hooks/useData'
 import cartContext from '../../contexts/cartContext'
 import userContext from '../../contexts/userContext'
-
+import config from '../../config.json'
 
 function SingleProduct() {
   const {id} = useParams();
@@ -18,10 +18,10 @@ function SingleProduct() {
   <section className='align_center single_product'>
     {product && <div className='align_center'>
         <div className=' single_product_thumbnails'>
-        {product.images.map((image,index) =>(<img src={`http://localhost:5000/products/${image}`} key={index} alt={product.title} className={selectedImage === index ? "selected_image" : ""} onClick={()=>setSelectedImage(index)}/>))}
+        {product.images.map((image,index) =>(<img src={`${config.backendURL}/products/${image}`} key={index} alt={product.title} className={selectedImage === index ? "selected_image" : ""} onClick={()=>setSelectedImage(index)}/>))}
         </div>
 
-        <img src={`http://localhost:5000/products/${product.images[selectedImage]}`} alt={product.title} className='single_product_display' />
+        <img src={`${config.backendURL}/products/${product.images[selectedImage]}`} alt={product.title} className='single_product_display' />
     <div className='single_product_details'>
     <h1 className="single_product_title">{product.title}</h1>
     <p className='single_product_description'>${product.description}</p>
