@@ -1,5 +1,3 @@
-
-
 import './HeroSection.css'
 import { Link} from 'react-router-dom'
 function HeroSection({ title, subtitle, link, image}) {
