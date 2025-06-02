@@ -2,3 +2,10 @@
     width: 25px;
     margin-left: 5px;
 }
+
+
+@media (max-width: 480px) {
+    .link_emoji {
+        width: 20px;
+    }
+}

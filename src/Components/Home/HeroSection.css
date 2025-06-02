@@ -41,10 +41,39 @@
 
 }
 .hero_image{
-    height: 500px;
+     width: 100%;
+    max-width: 500px;
+    height: auto;
     transition: all 0.3s ease-in-out;
+    object-fit: contain;
+
 }
 
 .hero_image:hover{
     transform: scale(1.05);
+}
+
+
+
+/* ✅ Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .hero_section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero_title {
+        font-size: 32px;
+    }
+
+    .hero_subtitle {
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .hero_image {
+        max-width: 90%;
+        margin-top: 20px;
+    }
 }

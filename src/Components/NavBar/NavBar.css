@@ -1,8 +1,11 @@
 .navbar{
+    display: flex;
     justify-content: space-between;
+
     padding: 0px 40px;
     margin: 15px;
     background-color: #fff;
+    flex-wrap: wrap;
 }
 .navbar_heading{
     font-size: 30px;
@@ -89,4 +92,55 @@
   font-size: 18px;
   color: #6b21a8;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch; /* makes full-width */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .navbar > div {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar_heading {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .navbar_form {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .navbar_search {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .search_button {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .nav_links {
+
+    margin: 10px;
+    font-size: 14px;
+    display: inline-block;
+  }
+
+  .nav_item {
+    font-size: 14px;
+    gap: 10px;
+    margin-bottom:  8px;
+    justify-content: center;
+  }
+}
+
 

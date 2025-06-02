@@ -15,7 +15,6 @@ function App() {
 const [cart, setCart] = useState([]);
 const [user, setUser]=useState(null);
 const [token, setToken] = useState(null);
-// console.log(user)
 
 useEffect(()=>{
 try{

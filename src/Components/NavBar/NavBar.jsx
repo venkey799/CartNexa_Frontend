@@ -65,8 +65,8 @@ function NavBar() {
       <div className='align_center'>
         <h1 className='navbar_heading'>CARTNEXA</h1>
       <form action="" className='align_center navbar_form' onSubmit={handleSubmit}>
-          <input type="text" className='navbar_search' placeholder='what u want..?' value={search} onChange={e=>setSearch(e.target.value)} onKeyDown={handleKeyDown} />
-          <button className='search_button'>search</button>
+          <input type="text" className='navbar_search' placeholder='search for something...' value={search} onChange={e=>setSearch(e.target.value)} onKeyDown={handleKeyDown} />
+          <button className='search_button'>Search</button>
 
     {
       suggestions?.length > 0 && <ul className="search_results">

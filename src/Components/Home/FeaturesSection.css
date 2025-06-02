@@ -11,3 +11,20 @@
     margin-bottom: 65px;
     
 }
+
+@media (max-width: 768px) {
+    .featured_products {
+        margin: 20px;
+    }
+
+    .featured_products > h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .featured_products_list {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
